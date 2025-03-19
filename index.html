@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>rahaf birthday 🎂🎉</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        :root {
+
+            --primary-color: #e91e63;
+
+            --secondary-color: #ff4081;
+
+            --accent-color: #fff;
+
+            --choco-color: #6b4228;
+
+            --cream-color: #fff5e6;
+
+        }
+
+        body {
+
+            font-family: 'Cairo', sans-serif;
+
+            background: radial-gradient(circle, #ff758c, #ff7eb3);
+
+            min-height: 100vh;
+
+            margin: 0;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-direction: column;
+
+            overflow: hidden;
+
+        }
+
+        h1 {
+
+            color: var(--accent-color);
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1.5rem;
+
+            text-shadow: 0 4px 6px rgba(0,0,0,0.2);
+
+            animation: fadeIn 1.5s ease-in-out;
+
+        }
+
+        .cake-container {
+
+            position: relative;
+
+            opacity: 0;
+
+            transform: scale(0.8);
+
+            transition: opacity 1s ease, transform 0.8s ease;
+
+        }
+
+        .cake {
+
+            position: relative;
+
+            width: 260px;
+
+            height: 220px;
+
+        }
+
+        .cake-layer {
+
+            position: absolute;
+
+            background: var(--choco-color);
+
+            border-radius: 15px;
+
+            box-shadow: inset 0 -4px 10px rgba(0,0,0,0.2);
+
+        }
+
+        .layer1 { width: 240px; height: 70px; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+        .layer2 { width: 200px; height: 60px; bottom: 70px; left: 50%; transform: translateX(-50%); }
+
+        .layer3 { width: 160px; height: 50px; bottom: 130px; left: 50%; transform: translateX(-50%); }
+
+        .icing {
+
+            position: absolute;
+
+            width: 110%;
+
+            height: 25px;
+
+            background: var(--cream-color);
+
+            border-radius: 50%;
+
+            left: -5%;
+
+            top: -10px;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+        }
+
+        .sprinkles {
+
+            position: absolute;
+
+            top: -5px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            display: flex;
+
+            gap: 6px;
+
+        }
+
+        .sprinkle {
+
+            width: 10px;
+
+            height: 10px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+        }
+
+        .candle {
+
+            position: absolute;
+
+            width: 12px;
+
+            height: 50px;
+
+            background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+
+            border-radius: 6px;
+
+            bottom: 180px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+        }
+
+        .flame {
+
+            position: absolute;
+
+            width: 18px;
+
+            height: 24px;
+
+            background: linear-gradient(180deg, #ffd700, #ff4500);
+
+            border-radius: 50% 50% 40% 40%;
+
+            bottom: 230px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            animation: flameFlicker 1.5s infinite alternate;
+
+        }
+
+        .btn {
+
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+
+            color: white;
+
+            padding: 1.2rem 2.5rem;
+
+            font-size: 1.4rem;
+
+            border: none;
+
+            border-radius: 50px;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+
+            margin-top: 1rem;
+
+        }
+
+        .btn:hover {
+
+            transform: scale(1.1);
+
+            box-shadow: 0 12px 30px rgba(233, 30, 99, 0.4);
+
+        }
+
+        .message {
+
+            color: var(--accent-color);
+
+            font-size: 1.8rem;
+
+            margin-top: 2rem;
+
+            opacity: 0;
+
+            transform: translateY(20px);
+
+            transition: all 1s ease;
+
+        }
+
+        @keyframes fadeIn {
+
+            from { opacity: 0; transform: translateY(-20px); }
+
+            to { opacity: 1; transform: translateY(0); }
+
+        }
+
+        @keyframes flameFlicker {
+
+            0% { transform: translateX(-50%) scale(1) rotate(-2deg); }
+
+            100% { transform: translateX(-50%) scale(1.1) rotate(2deg); }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1> happy birthday 🎂</h1>
+
+    
+
+    <button class="btn" id="startBtn" onclick="startCelebration()">عيد الميلاد 🎈</button>
+
+    <div class="cake-container" id="cakeContainer">
+
+        <div class="cake">
+
+            <div class="cake-layer layer1">
+
+                <div class="icing"></div>
+
+                <div class="sprinkles">
+
+                    <div class="sprinkle"></div>
+
+                    <div class="sprinkle"></div>
+
+                    <div class="sprinkle"></div>
+
+                </div>
+
+            </div>
+
+            <div class="cake-layer layer2">
+
+                <div class="icing"></div>
+
+            </div>
+
+            <div class="cake-layer layer3">
+
+                <div class="icing"></div>
+
+            </div>
+
+            <div class="candle"></div>
+
+            <div class="flame"></div>
+
+        </div>
+
+        
+
+        <div class="message" id="birthdayMessage">
+
+            كل عام وأنتِ بخير يا رهوف ❤️
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function startCelebration() {
+
+            document.getElementById('startBtn').style.display = 'none';
+
+            let cakeContainer = document.getElementById('cakeContainer');
+
+            let message = document.getElementById('birthdayMessage');
+
+            cakeContainer.style.opacity = '1';
+
+            cakeContainer.style.transform = 'scale(1)';
+
+            
+
+            setTimeout(() => {
+
+                message.style.opacity = '1';
+
+                message.style.transform = 'translateY(0)';
+
+            }, 1000);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
